@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chrome Weather Extension</title>
+  <!-- Linking the stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Get your live Current Weather</h2>
+
+    <!-- Unit toggle: Celsius / Fahrenheit -->
+    <label class="toggle-container">
+      <input type="checkbox" id="unitToggle" />
+      <span class="slider"></span>
+      <span class="label-text">°C or °F</span>
+    </label>
+
+    <!-- Trigger to fetch weather -->
+    <button id="getWeather">Check the Weather</button>
+
+    <!-- Results section -->
+    <div id="weatherResult" class="result-box">
+      <p class="placeholder">Click the button to load your local weather.</p>
+    </div>
+  </div>
+
+  <!-- Script at the end to keep page load fast -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Base styles - keeping things clean and minimal */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* subtle teal gradient */
+  color: #333; /* almost black but easier on the eyes */
+}
+
+/* Wrapper */
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Headline tweaks */
+h2 {
+  margin-bottom: 15px;
+  color: #00796b; /* a nice calm greenish tone */
+}
+
+/* Primary button style */
+button {
+  padding: 10px 15px;
+  background-color: #0097a7;  /* tropical ocean kind of blue */
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* smooth hover */
+}
+
+/* On hover, let’s go a bit darker */
+button:hover {
+  background-color: #007c91;
+}
+
+/* Output / results box */
+.result-box {
+  margin-top: 15px;
+  background-color: #ffffffdd; /* semi-transparent white */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* a soft little glow */
+}
+
+/* Placeholder-style text (like when nothing's loaded yet) */
+.placeholder {
+  color: #777;
+  font-style: italic;
+}
+
+/* ========================
+   Toggle Switch Styles
+   ======================== */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Hide the default checkbox - replaced with slider */
+.toggle-container input {
+  display: none;
+}
+
+/* Actual switch background */
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc; /* default off state */
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* The circle inside the toggle */
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+/* When the toggle is checked, slide the circle to the right */
+input:checked + .slider::before {
+  transform: translateX(20px);
+  background-color: white; /* can maybe add color change later */
+}
+
+/* Label next to switch */
+.label-text {
+  font-size: 14px;
+  /* maybe add font-weight: 500 if it looks too light */
+}
